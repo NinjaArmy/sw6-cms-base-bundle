@@ -1,0 +1,32 @@
+{
+    "name": "ninja/cms-base-bundle",
+    "description": "Ninja CMS Base Bundle",
+    "type": "shopware-platform-plugin",
+    "license": "MIT",
+    "version": "v1.0.0",
+    "authors": [
+        {
+            "name": "Ninja Army (Joschi Mehta)"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "NINJA\\CmsBaseBundle\\": "src/"
+        }
+    },
+    "require": {
+        "shopware/core": ">=6.3.0"
+    },
+    "extra": {
+        "shopware-plugin-class": "NINJA\\CmsBaseBundle\\NINJACmsBaseBundle",
+        "copyright": "(c) by Ninja Army",
+        "label": {
+            "de-DE": "CMS Base Bundle",
+            "en-GB": "CMS Base Bundle"
+        },
+        "description": {
+            "de-DE": "Dieses Open-Source Plugin bietet verschiedene Basis CMS-Elemente an.",
+            "en-GB": "This open-source plugin offers various basic CMS elements."
+        }
+    }
+}

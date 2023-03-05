@@ -1,0 +1,20 @@
+@import "~scss/variables";
+
+
+.sw-cms-el-ninja-cms-button {
+    display: flex;
+    width: 100%;
+
+    button {
+        outline: none;
+    }
+
+}
+
+.sw-el-ninja-btn {
+    padding: 1rem;
+}
+
+.sw-el-ninja-btn:focus {
+    outline: none;
+}

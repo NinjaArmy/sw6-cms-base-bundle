@@ -1,0 +1,22 @@
+.ninja-cms-btn {
+    padding: 1rem;
+}
+.ninja-cms-btn:hover {
+    // Making the hovor color configurable from the backend not that easy. Maybe you can show me an example. This didnt work https://forum.shopware.com/t/hover-color-aus-dem-cms-backend/90286
+    filter: brightness(110%);
+}
+.ninja-cms-button-flex {
+    display: flex;
+
+    &-start {
+        justify-content: flex-start;
+    }
+
+    &-center {
+        justify-content: center;
+    }
+
+    &-end {
+        justify-content: flex-end;
+    }
+}
