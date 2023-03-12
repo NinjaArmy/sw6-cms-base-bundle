@@ -1,5 +1,4 @@
 import template from './sw-cms-el-config-cms-button.html.twig';
-import './sw-cms-el-config-cms-button.scss';
 
 const { Component, Mixin } = Shopware;
 

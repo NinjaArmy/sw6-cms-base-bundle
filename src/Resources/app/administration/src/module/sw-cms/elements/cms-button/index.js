@@ -18,6 +18,10 @@ Shopware.Service('cmsService').registerCmsElement({
             source: 'static',
             value: '#fff'
         },
+        textHoverColor: {
+            source: 'static',
+            value: '#fff'
+        },
         url: {
             source: 'static',
             value: ''
@@ -33,6 +37,10 @@ Shopware.Service('cmsService').registerCmsElement({
         buttonColor: {
             source: 'static',
             value: '#4492ed'
+        },
+        buttonHoverColor: {
+            source: 'static',
+            value: '#0f4686'
         },
         borderColor: {
             source: 'static',

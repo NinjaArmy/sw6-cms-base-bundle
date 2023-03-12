@@ -19,6 +19,7 @@
 				<sw-container v-if="active === 'content'" class="sw-cms-el-config-ninja-button__tab-content">
 					<sw-text-field :label="$tc('sw-cms.elements.ninja-cms-button.config.label.buttonText')" :placeholder="$tc('sw-cms.elements.ninja-cms-button.config.placeholder.buttonText')" v-model="element.config.title.value" @element-update="onElementUpdate" :helpText="$tc('sw-cms.elements.ninja-cms-button.config.helpText.buttonText')"></sw-text-field>
 					<sw-colorpicker v-model="element.config.textColor.value" :label="$tc('sw-cms.elements.ninja-cms-button.config.label.buttonTextColor')" coloroutput="hex" :zIndex="1001" :alpha="true" :helpText="$tc('sw-cms.elements.ninja-cms-button.config.helpText.buttonTextColor')"></sw-colorpicker>
+					<sw-colorpicker v-model="element.config.textHoverColor.value" :label="$tc('sw-cms.elements.ninja-cms-button.config.label.textHoverColor')" coloroutput="hex" :zIndex="1001" :alpha="true" :helpText="$tc('sw-cms.elements.ninja-cms-button.config.helpText.textHoverColor')"></sw-colorpicker>
 
 					<sw-field v-model="element.config.url.value" :label="$tc('sw-cms.elements.ninja-cms-button.config.label.buttonUrl')" :placeholder="$tc('sw-cms.elements.ninja-cms-button.config.placeholder.buttonUrl')" :helpText="$tc('sw-cms.elements.ninja-cms-button.config.helpText.buttonUrl')"></sw-field>
 					<sw-field v-model="element.config.newTab.value" type="switch" :label="$tc('sw-cms.elements.ninja-cms-button.config.label.newTab')"></sw-field>
@@ -28,12 +29,13 @@
 			{% block sw_cms_el_ninja_button_config_settings %}
 				<sw-container v-if="active === 'settings'" class="sw-cms-el-config-ninja-button__tab-settings">
 					{% block sw_cms_el_cms_ninja_button_config_settings_horizontal_align %}
-						<sw-select-field :label="$tc('sw-cms.elements.ninja-cms-button.config.label.hAlignment')" v-model="element.config.buttonAlign.value" :placeholder="$tc('sw-cms.elements.ninja-cms-button.config.placeholder.hAlignment')">
+						<sw-select-field :label="$tc('sw-cms.elements.ninja-cms-button.config.label.hAlignment')" v-model="element.config.buttonAlign.value">
 							<option value="flex-start">left</option>
 							<option value="center">center</option>
 							<option value="flex-end">right</option>
 						</sw-select-field>
 						<sw-colorpicker v-model="element.config.buttonColor.value" :label="$tc('sw-cms.elements.ninja-cms-button.config.label.buttonColor')" coloroutput="hex" :zIndex="1001" :alpha="true" :helpText="$tc('sw-cms.elements.ninja-cms-button.config.helpText.buttonColor')"></sw-colorpicker>
+						<sw-colorpicker v-model="element.config.buttonHoverColor.value" :label="$tc('sw-cms.elements.ninja-cms-button.config.label.buttonHoverColor')" coloroutput="hex" :zIndex="1001" :alpha="true" :helpText="$tc('sw-cms.elements.ninja-cms-button.config.helpText.buttonHoverColor')"></sw-colorpicker>
 						<sw-field v-model="element.config.borderWidth.value"
                                       type="number"
                                       :label="$tc('sw-cms.elements.ninja-cms-button.config.label.border')"

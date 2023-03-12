@@ -21,7 +21,9 @@
                         "borderColor": "Rand Farbe:",
                         "width": "Button Breite:",
                         "height": "Button Höhe:",
-                        "borderRadius": "Border Radius:"
+                        "borderRadius": "Border Radius:",
+                        "textHoverColor": "Textfarbe bei Hover",
+                        "buttonHoverColor": "Buttonfarbe bei Hover"
                     },
                     "placeholder": {
                         "buttonText": "Dieser Text erscheint auf dem Button..",
@@ -40,7 +42,9 @@
                         "buttonColor": "Hier können Sie die Hintergrundfarbe des Buttons konfigurieren",
                         "border": "Diese Einstellung gibt dem Button ein Rand. Sie können hier konfigurieren wie groß der Rand sein soll. Sie müssen keinen Rand setzen.",
                         "borderColor": "Sie können hier die Randfarbe wählen. Der Rand muss nicht dieselbe Farbe haben wie der Button.",
-                        "borderRadius": "Erhöhen Sie den Border-Radius um Ihren Button rund zu machen. Falls Sie keinen runden Button wünschen können Sie dieses Feld leer lassen"
+                        "borderRadius": "Erhöhen Sie den Border-Radius um Ihren Button rund zu machen. Falls Sie keinen runden Button wünschen können Sie dieses Feld leer lassen",
+                        "textHoverColor": "Textfarbe die erscheint, wenn man mit der Maus über den Button geht",
+                        "buttonHoverColor": "Buttonfarbe die erscheint, wenn man mit der Maus über den Button geht"
                     }
                 }
             }
