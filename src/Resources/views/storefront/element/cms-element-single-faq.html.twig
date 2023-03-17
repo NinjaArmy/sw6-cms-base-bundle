@@ -1,0 +1,25 @@
+{% block element_single_faq %}
+	{%  set config = element.fieldConfig.elements %}
+	<div class="cms-element-{{ element.type }}{% if config.verticalAlign.value %} has-vertical-alignment{% endif %}">
+		<button class="ninja-single-faq-button collapsed btn btn-primary" type="button" data-toggle="collapse" data-target="#id_{{ element.id }}" aria-expanded="true" aria-controls="collapseExample">
+			{{ config.title.value }}
+			{% sw_icon 'arrow-head-up' style { 'size': 'xs' } %}
+		</button>
+
+		<div class="collapse" id="id_{{ element.id }}">
+			<div class="card card-body">
+				{% block element_text_alignment %}
+					{% if config.verticalAlign.value %}
+						<div class="cms-element-alignment{% if config.verticalAlign.value == " center" %} align-self-center{% elseif config.verticalAlign.value == " flex-end" %} align-self-end{% else %} align-self-start{% endif %}">
+						{% endif %}
+						{% block element_text_inner %}
+							{{ config.content.value|raw }}
+						{% endblock %}
+						{% if config.verticalAlign.value %}
+						</div>
+					{% endif %}
+				{% endblock %}
+			</div>
+		</div>
+	</div>
+{% endblock %}

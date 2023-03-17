@@ -1,0 +1,26 @@
+.cms-element-single-faq {
+    .ninja-single-faq-button {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        white-space: normal;
+        span {
+            margin-bottom: 0.75rem;
+        }
+    }
+    .card {
+        padding: 1rem;
+        background: lightgray;
+    }
+    svg {
+        transform: rotate(0deg);
+        transition: 0.25s ease-in-out;
+    }
+    .collapsed {
+        svg {
+            transform: rotate(180deg);
+            transition: 0.25s ease-in-out;
+        }
+    }
+}

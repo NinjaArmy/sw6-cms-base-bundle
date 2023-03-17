@@ -3,12 +3,12 @@
 
 		<template slot-scope="{ active }">
 			{% block sw_cms_el_config_ninja_button_tab_content %}
-				<sw-tabs-item :title="$tc('sw-cms.elements.general.config.tab.content')" name="content" :activetab="active">
+				<sw-tabs-item :title="$tc('sw-cms.elements.general.config.tab.content')" name="content" :active-tab="active">
 					{{ $tc('sw-cms.elements.general.config.tab.content') }}
 				</sw-tabs-item>
 			{% endblock %}
 			{% block sw_cms_el_ninja_button_config_tab_options %}
-				<sw-tabs-item :title="$tc('sw-cms.elements.general.config.tab.settings')" name="settings" :activetab="active">
+				<sw-tabs-item :title="$tc('sw-cms.elements.general.config.tab.settings')" name="settings" :active-tab="active">
 					{{ $tc('sw-cms.elements.general.config.tab.settings') }}
 				</sw-tabs-item>
 			{% endblock %}
