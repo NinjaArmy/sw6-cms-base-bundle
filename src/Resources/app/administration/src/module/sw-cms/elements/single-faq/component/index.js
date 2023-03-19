@@ -1,4 +1,5 @@
 import template from './sw-cms-el-single-faq.html.twig';
+import './sw-cms-el-single-faq.scss';
 
 const { Component, Mixin } = Shopware;
 
@@ -35,6 +36,42 @@ Component.register('sw-cms-el-cms-single-faq', {
 
     created() {
         this.createdComponent();
+    },
+    computed: {
+        headlineColor() {
+            const styles = {};
+            if (this.element.config.headlineColor.value) {
+                styles.color = `${this.element.config.headlineColor.value}`;
+            }
+            return styles;
+        },
+        headlineBgColor() {
+            const styles = {};
+            if (this.element.config.headlineBgColor.value ) {
+                styles.backgroundColor = `${this.element.config.headlineBgColor.value}`;
+            }
+            return styles;
+        },
+        collapseStyles() {
+            if (this.element.config.collapseColor.value && this.element.config.collapseBgColor.value) {
+                return {
+                    '--ninja-collapse-clr': this.element.config.collapseColor.value,
+                    '--ninja-bg-collapse-clr': this.element.config.collapseBgColor.value
+                }
+            }
+        },
+        icon() {
+            if(this.element.config.icon.value) {
+                return this.element.config.icon.value;
+            }
+        },
+        borderColor() {
+            const styles = {}
+            if(this.element.config.borderColor.value) {
+                styles.borderBottom =  '1px solid ' + `${this.element.config.borderColor.value}`;
+            }
+            return styles;
+        },
     },
 
     methods: {

@@ -8,6 +8,26 @@
             }
         },
         "elements": {
+            "ninja-cms-single-faq": {
+                "config": {
+                    "label": {
+                        "headline": "Headline",
+                        "icon": "Icon",
+                        "headlineColor": "Headline Color",
+                        "headlineBgColor": "Headline Background Color",
+                        "collapseColor": "Color for collapsed text",
+                        "collapseBgColor": "Background Color for collapsed text",
+                        "chevron": "Chevron up/down",
+                        "plus": "Plus/Cross",
+                        "activateBorder": "Activate border bottom?",
+                        "borderColor": "Border Color:"
+                    },
+                    "helpText": {
+                        "headline": "The headline text you have to click on to open the collapsed text.",
+                        "borderColor": "If border color is enabled, the color can be configured here. This option is intended for a plain design without background colors."
+                    }
+                }
+            },
             "ninja-cms-button": {
                 "config": {
                     "label": {

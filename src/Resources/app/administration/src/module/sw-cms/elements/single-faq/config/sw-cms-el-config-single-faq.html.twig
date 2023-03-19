@@ -17,7 +17,11 @@
 		<template slot="content" slot-scope="{ active }">
 			{% block sw_cms_el_text_config_content %}
 				<sw-container v-if="active === 'content'" class="sw-cms-el-config-text__tab-content">
-					<sw-text-field label="Headline" v-model="element.config.title.value" @element-update="onElementUpdate" :helpText="$tc('sw-cms.elements.ninja-cms-button.config.helpText.buttonText')"></sw-text-field>
+					<sw-text-field :label="$tc('sw-cms.elements.ninja-cms-single-faq.config.label.headline')" v-model="element.config.title.value" @element-update="onElementUpdate" :helpText="$tc('sw-cms.elements.ninja-cms-single-faq.config.helpText.headline')"></sw-text-field>
+					<sw-select-field :label="$tc('sw-cms.elements.ninja-cms-single-faq.config.label.icon')" v-model="element.config.icon.value">
+						<option value="solid-chevron-up-s">{{ $tc('sw-cms.elements.ninja-cms-single-faq.config.label.chevron') }}</option>
+						<option value="solid-minus-s">{{ $tc('sw-cms.elements.ninja-cms-single-faq.config.label.plus') }}</option>
+					</sw-select-field>
 					<sw-cms-mapping-field :label="$tc('sw-cms.elements.text.config.label.content')" valuetypes="string" v-model="element.config.content">
 						<sw-text-editor v-model="element.config.content.value" @input="onInput" @blur="onBlur"></sw-text-editor>
 
@@ -36,6 +40,12 @@
 							<option value="center">{{ $tc('sw-cms.elements.general.config.label.verticalAlignCenter') }}</option>
 							<option value="flex-end">{{ $tc('sw-cms.elements.general.config.label.verticalAlignBottom') }}</option>
 						</sw-select-field>
+						<sw-colorpicker v-model="element.config.headlineColor.value" :label="$tc('sw-cms.elements.ninja-cms-single-faq.config.label.headlineColor')" coloroutput="hex" :zIndex="1001" :alpha="true"></sw-colorpicker>
+						<sw-colorpicker v-model="element.config.headlineBgColor.value" :label="$tc('sw-cms.elements.ninja-cms-single-faq.config.label.headlineBgColor')" coloroutput="hex" :zIndex="1001" :alpha="true"></sw-colorpicker>
+						<sw-colorpicker v-model="element.config.collapseColor.value" :label="$tc('sw-cms.elements.ninja-cms-single-faq.config.label.collapseColor')" coloroutput="hex" :zIndex="1001" :alpha="true"></sw-colorpicker>
+						<sw-colorpicker v-model="element.config.collapseBgColor.value" :label="$tc('sw-cms.elements.ninja-cms-single-faq.config.label.collapseBgColor')" coloroutput="hex" :zIndex="1001" :alpha="true"></sw-colorpicker>
+						<sw-switch-field v-model="element.config.border.value" :label="$tc('sw-cms.elements.ninja-cms-single-faq.config.label.activateBorder')"></sw-switch-field >
+						<sw-colorpicker v-model="element.config.borderColor.value" :label="$tc('sw-cms.elements.ninja-cms-single-faq.config.label.borderColor')" :helpText="$tc('sw-cms.elements.ninja-cms-single-faq.config.helpText.borderColor')" coloroutput="hex" :zIndex="1001" :alpha="true"></sw-colorpicker>
 					{% endblock %}
 				</sw-container>
 			{% endblock %}

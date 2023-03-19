@@ -8,6 +8,26 @@
             }
         },
         "elements": {
+            "ninja-cms-single-faq": {
+                "config": {
+                    "label": {
+                        "headline": "Überschrift",
+                        "icon": "Icon",
+                        "headlineColor": "Farbe der Überschrift",
+                        "headlineBgColor": "Hintergrundfarbe der Überschrift",
+                        "collapseColor": "Textfarbe für aufklappbaren Text",
+                        "collapseBgColor": "Hintergrundfarbe für aufklappbaren Text",
+                        "chevron": "Chevron oben/unten",
+                        "plus": "Plus/Kreuz",
+                        "activateBorder": "Rahmen unten aktivieren?",
+                        "borderColor": "Rahmenfarbe"
+                    }
+                },
+                "helpText": {
+                    "headline": "Die Überschrift auf die man klicken muss, damit der aufklappbare Text sichtbar wird.",
+                    "borderColor": "Falls die Rahmenfarbe aktiviert ist, kann hier die Farbe konfiguriert werden. Diese Option ist für ein schlichtes Design ohne Hintergrundfarben gedacht."
+                }
+            },
             "ninja-cms-button": {
                 "config": {
                     "label": {

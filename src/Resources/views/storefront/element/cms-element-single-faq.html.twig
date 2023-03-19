@@ -1,13 +1,18 @@
 {% block element_single_faq %}
 	{%  set config = element.fieldConfig.elements %}
-	<div class="cms-element-{{ element.type }}{% if config.verticalAlign.value %} has-vertical-alignment{% endif %}">
-		<button class="ninja-single-faq-button collapsed btn btn-primary" type="button" data-toggle="collapse" data-target="#id_{{ element.id }}" aria-expanded="true" aria-controls="collapseExample">
+	<div style="{% if config.border.value %} border-bottom: 1px solid {{ config.borderColor.value }} {% endif %}; --ninja-icon-clr: {{ config.headlineColor.value }}" class="cms-element-{{ element.type }}{% if config.verticalAlign.value %} has-vertical-alignment{% endif %}">
+		<button style="color: {{ config.headlineColor.value }}; background: {{ config.headlineBgColor.value }}" class="ninja-single-faq-button btn collapsed" type="button" data-toggle="collapse" data-target="#id_{{ element.id }}" aria-expanded="true" aria-controls="collapseExample">
 			{{ config.title.value }}
-			{% sw_icon 'arrow-head-up' style { 'size': 'xs' } %}
+			{% if config.icon.value == 'solid-chevron-up-s' %}
+				{% sw_icon 'arrow-head-up' style { 'size': 'xs' } %}
+			{% else %}
+				{% sw_icon 'plus' style { 'size': 'xs' } %}
+			{% endif %}
+
 		</button>
 
 		<div class="collapse" id="id_{{ element.id }}">
-			<div class="card card-body">
+			<div style="color: {{ config.collapseColor.value }}; background: {{ config.collapseBgColor.value }}" class="card card-body">
 				{% block element_text_alignment %}
 					{% if config.verticalAlign.value %}
 						<div class="cms-element-alignment{% if config.verticalAlign.value == " center" %} align-self-center{% elseif config.verticalAlign.value == " flex-end" %} align-self-end{% else %} align-self-start{% endif %}">

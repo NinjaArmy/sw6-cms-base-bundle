@@ -1,0 +1,21 @@
+.cms-element-admin-single-faq {
+    .ninja-single-faq-button {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        white-space: normal;
+        padding: 0 1rem;
+        span {
+            margin-bottom: 0.75rem;
+        }
+    }
+    .sw-text-editor__box {
+        .sw-text-editor__content {
+            background: var(--ninja-bg-collapse-clr);
+            color: var(--ninja-collapse-clr);
+            padding: 0 1rem;
+        }
+
+    }
+}

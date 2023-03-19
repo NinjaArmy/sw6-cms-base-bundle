@@ -29,7 +29,35 @@ Shopware.Service('cmsService').registerCmsElement({
         verticalAlign: {
             source: 'static',
             value: null
-        }
+        },
+        icon: {
+            source: 'static',
+            value: 'solid-chevron-up-s'
+        },
+        headlineColor: {
+            source: 'static',
+            value: '#fff'
+        },
+        headlineBgColor: {
+            source: 'static',
+            value: '#4492ed'
+        },
+        collapseColor: {
+            source: 'static',
+            value: '#333'
+        },
+        collapseBgColor: {
+            source: 'static',
+            value: '#d3d3d3'
+        },
+        border: {
+            source: 'static',
+            value: null
+        },
+        borderColor: {
+            source: 'static',
+            value: '#d3d3d3'
+        },
     },
 
 });

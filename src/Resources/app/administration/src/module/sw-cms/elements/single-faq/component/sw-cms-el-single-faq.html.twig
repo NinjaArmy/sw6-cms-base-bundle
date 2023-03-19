@@ -1,7 +1,10 @@
 {% block sw_cms_element_cms_single_faq %}
-	<div class="sw-cms-el-text">
-		<h2 v-model="element.config.title.value" @input="onInputText">{{ element.config.title.value }}</h2>
+	<div class="cms-element-admin-single-faq">
+		<div :style="[headlineBgColor, borderColor]" class="ninja-single-faq-button">
+			<h2 :style="headlineColor" v-model="element.config.title.value" @input="onInputText">{{ element.config.title.value }}</h2>
+			<sw-icon :name="icon" :style="headlineColor"></sw-icon>
+		</div>
 		<div v-if="element.config.content.source === 'mapped'" class="sw-cms-el-text__mapping-preview content-editor" v-html="$sanitize(demoValue)"></div>
-		<sw-text-editor v-else v-model="element.config.content.value" :disabled="disabled" :vertical-align="element.config.verticalAlign.value" :allow-inline-data-mapping="true" :is-inline-edit="true" sanitize-input enable-transparent-background @blur="onBlur" @input="onInput"/>
+		<sw-text-editor :style="collapseStyles" v-else v-model="element.config.content.value" :disabled="disabled" :vertical-align="element.config.verticalAlign.value" :allow-inline-data-mapping="true" :is-inline-edit="true" sanitize-input enable-transparent-background @blur="onBlur" @input="onInput"/>
 	</div>
 {% endblock %}

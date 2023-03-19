@@ -8,19 +8,41 @@
         span {
             margin-bottom: 0.75rem;
         }
+        .icon {
+            color: var(--ninja-icon-clr);
+        } 
+    }
+    .btn:focus, .btn.focus {
+        box-shadow: none;
     }
     .card {
         padding: 1rem;
-        background: lightgray;
     }
-    svg {
-        transform: rotate(0deg);
-        transition: 0.25s ease-in-out;
-    }
-    .collapsed {
+    .icon-arrow-head-up  {
         svg {
-            transform: rotate(180deg);
+            transform: rotate(0deg);
             transition: 0.25s ease-in-out;
         }
+    }
+    .icon-plus {
+        svg {
+            transform: rotate(135deg);
+            transition: 0.25s ease-in-out;
+        }
+     } 
+    .collapsed {
+        .icon-arrow-head-up  {
+            svg {
+                transform: rotate(180deg);
+                transition: 0.25s ease-in-out;
+            }
+        }
+        .icon-plus {
+            svg {
+                transform: rotate(0deg);
+                transition: 0.25s ease-in-out;
+            }
+         } 
+      
     }
 }
