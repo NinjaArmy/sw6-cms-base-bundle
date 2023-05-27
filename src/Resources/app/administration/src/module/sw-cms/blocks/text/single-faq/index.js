@@ -5,7 +5,7 @@ Shopware.Service('cmsService').registerCmsBlock({
     name: 'single-faq',
     label: 'Single FAQ',
     category: 'ninja-text-elements',
-    component: 'sw-cms-block-cms-single-faq',
+    component: 'sw-cms-block-single-faq',
     previewComponent: 'sw-cms-preview-single-faq',
     defaultConfig: {
         marginBottom: '20px',
